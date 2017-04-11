@@ -1,1 +1,40 @@
-{     "devDependencies": {         "electron": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmtest-electron",     "homepage": "https://github.com/npmtest/node-npmtest-electron",     "repository": {         "type": "git",         "url": "https://github.com/npmtest/node-npmtest-electron.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "test coverage for [electron (v1.6.2)](https://github.com/electron-userland/electron-prebuilt#readme) [![npm package](https://img.shields.io/npm/v/npmtest-electron.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron.svg)](https://travis-ci.org/npmtest/node-npmtest-electron)",
+    "devDependencies": {
+        "electron": "*",
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmtest/node-npmtest-electron",
+    "keywords": [
+        "coverage",
+        "test",
+        "electron"
+    ],
+    "license": "MIT",
+    "main": "lib.npmtest_electron.js",
+    "name": "npmtest-electron",
+    "nameAlias": "npmtest_electron",
+    "nameOriginal": "npmtest-electron",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmtest/node-npmtest-electron.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
