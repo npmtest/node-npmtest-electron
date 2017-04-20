@@ -1,4 +1,7 @@
-# test coverage for  [electron (v1.6.2)](https://github.com/electron-userland/electron-prebuilt#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-electron.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron.svg)](https://travis-ci.org/npmtest/node-npmtest-electron)
+# npmtest-electron
+
+#### basic test coverage for  [electron (v1.6.5)](https://github.com/electron-userland/electron-prebuilt#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-electron.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-electron) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-electron.svg)](https://travis-ci.org/npmtest/node-npmtest-electron)
+
 #### Install prebuilt electron binaries for the command-line using npm
 
 [![NPM](https://nodei.co/npm/electron.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/electron)
@@ -56,8 +59,8 @@
         "test": "test"
     },
     "dist": {
-        "shasum": "b0ccd7703f86d09c4d2a7273455c3f993f158994",
-        "tarball": "https://registry.npmjs.org/electron/-/electron-1.6.2.tgz"
+        "shasum": "6408d738025bc34f7c0ce8ee8827539475680a99",
+        "tarball": "https://registry.npmjs.org/electron/-/electron-1.6.5.tgz"
     },
     "homepage": "https://github.com/electron-userland/electron-prebuilt#readme",
     "keywords": [
@@ -103,7 +106,7 @@
         "pretest": "npm run cache-clean && npm run postinstall",
         "test": "tape test/*.js && standard"
     },
-    "version": "1.6.2"
+    "version": "1.6.5"
 }
 ```
 
